@@ -1,0 +1,68 @@
+[project]
+name = "pydantic-ai-test"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Du Shiqiao", email = "lucidfrontier.45@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "pydantic-ai-slim[google]>=1.96.0",
+    "python-dotenv>=1.2.2",
+]
+
+[project.scripts]
+pydantic-ai-test = "pydantic_ai_test:main"
+
+[build-system]
+requires = ["uv_build>=0.11.12,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.2.0",
+    "ruff>=0.15.12",
+    "ty>=0.0.35",
+]
+
+[tool.uv]
+managed = true
+
+[tool.poe.tasks]
+ruff_check = "ruff check ."
+ruff_fix = "ruff check --fix ."
+ruff_format = "ruff format ."
+pyrefly_check = "pyrefly check ."
+check = ["ruff_check", "pyrefly_check"]
+format = ["ruff_fix", "ruff_format"]
+test = "pytest tests -n auto --cov=app --cov-report=term --cov-report=xml"
+
+[tool.pytest.ini_options]
+filterwarnings = ["ignore::FutureWarning"]
+
+[tool.ruff]
+target-version = "py313"
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "F",
+    "W",
+    "I",
+    "B",
+    "RUF",
+    "UP",
+    "N",
+    "SIM",
+    "A",
+    "S",
+    "DTZ",
+    "PIE",
+    "PLE",
+]
+# add directory names to exclude from analysis
+exclude = ["tests/**/*", "deps/**/*"]
+
+[tool.ruff.lint.per-file-ignores]
+"*/__init__.py" = ['F401']

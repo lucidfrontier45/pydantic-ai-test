@@ -1,0 +1,19 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+.ruff_cache
+
+# Virtual environments
+.venv
+
+# I don't want to fix Python and dependency versions completely
+.python-version
+uv.lock
+
+.env
+.tree-sitter-cache
+.agents
