@@ -7,10 +7,7 @@ authors = [
     { name = "Du Shiqiao", email = "lucidfrontier.45@gmail.com" }
 ]
 requires-python = ">=3.14"
-dependencies = [
-    "pydantic-ai-slim[google]>=1.96.0",
-    "python-dotenv>=1.2.2",
-]
+dependencies = ["pydantic-ai-slim[google]>=1.96.0"]
 
 [project.scripts]
 pydantic-ai-test = "pydantic_ai_test:main"
@@ -63,6 +60,7 @@ select = [
 ]
 # add directory names to exclude from analysis
 exclude = ["tests/**/*", "deps/**/*"]
+ignore = ["E501", "S603", "S607"]
 
 [tool.ruff.lint.per-file-ignores]
 "*/__init__.py" = ['F401']
