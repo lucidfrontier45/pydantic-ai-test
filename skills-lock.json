@@ -5,7 +5,7 @@
       "source": "pydantic/skills",
       "sourceType": "github",
       "skillPath": "skills/building-pydantic-ai-agents/SKILL.md",
-      "computedHash": "3c89db85a2d130adc79be0477d1186025af5acd2eae87cb579c3e83107202606"
+      "computedHash": "535c5903c2fe8f9aad6df524979d4926a9a1aa0d11d680728faf8a2ad06ecfd4"
     }
   }
 }

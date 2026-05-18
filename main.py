@@ -9,7 +9,7 @@ logging.basicConfig(level=logging.INFO, format="%(name)s: %(message)s")
 logger = logging.getLogger("tools")
 
 agent = pydantic_ai.Agent(
-    "google:gemini-2.5-flash", instructions="You are an AI assistant"
+    "google:gemini-3.1-flash-lite", instructions="You are an AI assistant"
 )
 
 
@@ -59,7 +59,7 @@ if __name__ == "__main__":
 
     prompt = " ".join(prompt_args)
     if target_dir:
-        prompt = f"Use files in directory {target_dir} to response\n\n{prompt}"
+        prompt = f"Use only files in directory {target_dir} to respond\n\n{prompt}"
 
     result = agent.run_sync(prompt)
 
