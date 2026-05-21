@@ -9,22 +9,14 @@ authors = [
 requires-python = ">=3.14"
 dependencies = ["pydantic-ai-slim[google]>=1.96.0"]
 
-[project.scripts]
-pydantic-ai-test = "pydantic_ai_test:main"
-
-[build-system]
-requires = ["uv_build>=0.11.12,<0.12.0"]
-build-backend = "uv_build"
-
 [dependency-groups]
 dev = [
     "ipykernel>=7.2.0",
+    "poethepoet>=0.46.0",
+    "pyrefly>=1.0.0",
+    "pytest>=9.0.3",
     "ruff>=0.15.12",
-    "ty>=0.0.35",
 ]
-
-[tool.uv]
-managed = true
 
 [tool.poe.tasks]
 ruff_check = "ruff check ."
@@ -33,7 +25,7 @@ ruff_format = "ruff format ."
 pyrefly_check = "pyrefly check ."
 check = ["ruff_check", "pyrefly_check"]
 format = ["ruff_fix", "ruff_format"]
-test = "pytest tests -n auto --cov=app --cov-report=term --cov-report=xml"
+test = "pytest tests"
 
 [tool.pytest.ini_options]
 filterwarnings = ["ignore::FutureWarning"]

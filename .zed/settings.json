@@ -3,19 +3,19 @@
 // For a full list of overridable settings, and general information on folder-specific settings,
 // see the documentation: https://zed.dev/docs/configuring-zed#settings-files
 {
-    "languages": {
-        "Python": {
-            "language_servers": ["ty", "ruff", "!basedpyright"],
-            "formatter": [
-                {
-                    "code_action": "source.organizeImports.ruff"
-                },
-                {
-                    "language_server": {
-                        "name": "ruff"
-                    }
-                }
-            ]
-        }
-    }
+  "languages": {
+    "Python": {
+      "language_servers": ["!basedpyright", "ruff", "pyrefly"],
+      "formatter": [
+        {
+          "code_action": "source.organizeImports.ruff",
+        },
+        {
+          "language_server": {
+            "name": "ruff",
+          },
+        },
+      ],
+    },
+  },
 }
