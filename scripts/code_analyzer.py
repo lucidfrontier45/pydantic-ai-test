@@ -1,3 +1,9 @@
+# /// script
+# dependencies = [
+# "pydantic-ai-slim[google]>=1.96.0"
+# ]
+# ///
+#
 import logging
 import subprocess
 import sys
