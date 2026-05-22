@@ -2,6 +2,11 @@
 
 Pydantic AI is a modern Python framework designed to build type-safe AI agents with structured outputs, tool integration, and dependency injection capabilities. Built on top of Pydantic's robust data validation system, it provides a developer-friendly approach to creating reliable and maintainable AI applications.
 
+## Development Setup
+
+- Pyright or Pyrefly are recommended for LSP. Ty still has unsupported feature at 2026-05.
+- There are [official skills](https://pydantic.dev/docs/ai/overview/coding-agent-skills/). You can add them by `npx/bunx skills add pydantic/skills`.
+
 ## Core Features
 
 ### 1. Simple Agent Creation
@@ -158,5 +163,3 @@ Pydantic AI is particularly well-suited for:
 - **Data Analysis Systems**: Requiring structured output formats
 - **Workflow Automation**: Through tool integration and dependency management
 - **Multi-tenant Applications**: Leveraging dependency injection for user-specific behavior
-
-## Comparison with LangChain
