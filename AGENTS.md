@@ -16,6 +16,7 @@ Use these `uv` commands to manage the project, verify code quality, and run test
 
 - **Tech Stack:**
   - Python 3.13+
+  - [Pydantic AI](https://pydantic.dev/docs/ai/overview/)
 - **File Structure:**
   - `src/` – Application source code
   - `tests/` – Unit and functional tests
